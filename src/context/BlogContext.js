@@ -18,6 +18,6 @@ const Provider = ({ children }) => {
     )
 }
 
-export const UseBlog = () => useContext(Context)
+export const useBlog = () => useContext(Context)
 
 export default Provider
