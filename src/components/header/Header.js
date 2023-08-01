@@ -20,26 +20,31 @@ export default function Header() {
 
   return (
     <>
-        <header className="py-4 mb-5">
+        <header className="py-4 mb-10">
             <div className="container mx-auto">
                 <nav>
                     <ul className="flex items-center justify-center flex-wrap gap-4">
                         <li>
-                            <Link className="text-sm font-medium text-white bg-purple-500 shadow-lg shadow-gray-200 rounded-sm inline-block py-3 px-5 ease-in-out duration-500 hover:bg-purple-500" to="/">Anasayfa</Link>
-                        </li>
-                        <li>
-                            <Link className="text-sm font-medium text-white bg-purple-500 shadow-lg shadow-gray-200 rounded-sm inline-block py-3 px-5 ease-in-out duration-500 hover:bg-purple-500" to="/createpost">Blog Yaz</Link>
+                            <Link className="text-sm font-medium text-white bg-purple-500 shadow-lg shadow-gray-200 rounded-sm inline-block py-3 px-5 ease-in-out duration-500 hover:bg-purple-600" to="/">Anasayfa</Link>
                         </li>
                         { !isAuth ? (
-                           <Link className="text-sm font-medium text-white bg-purple-500 shadow-lg shadow-gray-200 rounded-sm inline-block py-3 px-5 ease-in-out duration-500 hover:bg-purple-500" to="/login">Giriş Yap</Link>
-
-                        ) : (
+                             <li>
+                                <Link className="text-sm font-medium text-white bg-purple-500 shadow-lg shadow-gray-200 rounded-sm inline-block py-3 px-5 ease-in-out duration-500 hover:bg-purple-600" to="/login">Giriş Yap</Link>
+                            </li>
+                         ) : (
+                            <>
+                            <li>
+                                <Link className="text-sm font-medium text-white bg-purple-500 shadow-lg shadow-gray-200 rounded-sm inline-block py-3 px-5 ease-in-out duration-500 hover:bg-purple-600" to="/createpost">Blog Yaz</Link>
+                            </li>
+                            <li>
                             <button 
-                            onClick={signUserOut} 
-                            className="text-sm font-medium text-white bg-purple-500 shadow-lg shadow-gray-200 rounded-sm inline-block py-3 px-5 ease-in-out duration-500 hover:bg-purple-500">Çıkış Yap</button>
+                                onClick={signUserOut} 
+                                className="text-sm font-medium text-white bg-purple-500 shadow-lg shadow-gray-200 rounded-sm inline-block py-3 px-5 ease-in-out duration-500 hover:bg-purple-500">
+                                Çıkış Yap
+                                </button>
+                            </li>
+                            </>
                         )}
-                        <li>
-                        </li>
                     </ul>
                 </nav>
             </div>

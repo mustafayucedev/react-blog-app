@@ -27,7 +27,6 @@ function Login() {
   return (
     <>
       <section>
-        <div className="container mx-auto">
           <div className="shadow-md shadow-gray-300 w-80 mx-auto p-5 rounded-md">
             <p className="text-center font-md mb-5">Google ile Giriş Yapın</p>
             <button 
@@ -37,7 +36,6 @@ function Login() {
               <span className="text-sm font-medium">Google ile Oturum Aç</span>
             </button>
           </div>
-        </div>
       </section>
     </>
   )

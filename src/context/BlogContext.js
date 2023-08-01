@@ -4,11 +4,17 @@ const Context = createContext()
 
 const Provider = ({ children }) => {
 
-    const [isAuth,setIsAuth] = useState(false)
+    const [isAuth,setIsAuth] = useState(localStorage.getItem("isAuth"))
+    const [blogTitle,setBlogTitle] = useState("")
+    const [blogDesc,setBlogDesc] = useState("")
 
     const data = {
         isAuth,
-        setIsAuth
+        setIsAuth,
+        blogTitle,
+        setBlogTitle,
+        blogDesc,
+        setBlogDesc
     }
 
     return (
