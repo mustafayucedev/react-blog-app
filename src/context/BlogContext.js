@@ -7,6 +7,7 @@ const Provider = ({ children }) => {
     const [isAuth,setIsAuth] = useState(localStorage.getItem("isAuth"))
     const [blogTitle,setBlogTitle] = useState("")
     const [blogDesc,setBlogDesc] = useState("")
+    const [postShow,setPostShow] = useState([])
 
     const data = {
         isAuth,
@@ -14,7 +15,9 @@ const Provider = ({ children }) => {
         blogTitle,
         setBlogTitle,
         blogDesc,
-        setBlogDesc
+        setBlogDesc,
+        postShow,
+        setPostShow
     }
 
     return (

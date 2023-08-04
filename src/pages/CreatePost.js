@@ -55,9 +55,11 @@ function CreatePost() {
           onChange={(e) => {setBlogDesc(e.target.value)}}
           />
       </div>
-      <button 
+      <button
       onClick={createPost}
-      className='w-full bg-purple-500 text-white text-md font-semibold p-3 rounded-sm ease-in-out duration-500 hover:bg-purple-600'>Kaydet</button>
+      className='w-full bg-purple-500 text-white text-md font-semibold p-3 rounded-sm ease-in-out duration-500 hover:bg-purple-600'>
+      Kaydet
+      </button>
     </div>
   )
 }

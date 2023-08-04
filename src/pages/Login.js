@@ -1,6 +1,5 @@
 import { FcGoogle } from "react-icons/fc"
 
-
 import { auth, provider } from "firebaseConfig/FirebaseConfig"
 import { signInWithPopup } from "firebase/auth"
 
